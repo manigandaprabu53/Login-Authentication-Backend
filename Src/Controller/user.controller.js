@@ -67,7 +67,7 @@ const forgotPassword = async(req, res)=>{
                 to: user.email,
                 from: 'passwordreset@demo.com',
                 subject: 'Password Reset',
-                text: `You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n Please click on the following link, or paste this into your browser to complete the process:\n\n http://localhost:5173/resetPassword/${user.random}\n\n  If you did not request this, please ignore this email and your password will remain unchanged.\n`
+                text: `You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n Please click on the following link, or paste this into your browser to complete the process:\n\n https://login-authentication-frontend.netlify.app/resetPassword/${user.random}\n\n  If you did not request this, please ignore this email and your password will remain unchanged.\n`
             }
 
             transporter.sendMail(mailOptions, (err)=>{
